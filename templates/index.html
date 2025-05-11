@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Sign Language Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Sign Language Detection</h1>
+        
+        <div class="content">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+            </div>
+            
+            <div class="controls">
+                <button id="capture-btn">Capture & Predict</button>
+                <div class="prediction-result">
+                    <h3>Prediction Result:</h3>
+                    <p id="sign-result">-</p>
+                    <p id="confidence-result">-</p>
+                </div>
+                
+                <div class="instructions">
+                    <h3>Instructions:</h3>
+                    <ol>
+                        <li>Position your hand in the green rectangle</li>
+                        <li>Make sure your hand is well-lit</li>
+                        <li>Click "Capture & Predict" to identify the sign</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

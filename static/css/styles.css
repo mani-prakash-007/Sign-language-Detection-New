@@ -1,0 +1,112 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.video-container {
+  flex: 1;
+  min-width: 500px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container img {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#capture-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+#capture-btn:hover {
+  background-color: #2980b9;
+}
+
+.prediction-result {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.prediction-result h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+#sign-result {
+  font-size: 24px;
+  font-weight: bold;
+  color: #27ae60;
+  margin: 10px 0;
+}
+
+#confidence-result {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+.instructions {
+  background-color: #e8f4fc;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.instructions ol {
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .video-container, .controls {
+      min-width: 100%;
+  }
+}
